@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+
+  height: 280px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+a{color:white;}
+navbar{
+overflow: hidden;
+  background-color: #333;
+  position:fixed;
+  top: 0;
+  width: 100%;
+bottom:0;
+z-index:99;
+}
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+.navbar a {
+ 
+  text-align: center;
+  padding: 14px 20px;
+  font-weight:bold;}
+  
+</style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Page Title</title>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+  <a class="navbar-brand" href="#"><span style="font-family:Sofia, sans-serif;">E-SHOP</span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#section1">MEN<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2">WOMEN</a>
+      </li>
+ <li class="nav-item">
+        <a class="nav-link" href="#section3">KIDS</a>
+      </li>
+<li class="nav-item">
+        <a class="nav-link" href="#section4">NEW ARRIVALS</a>
+      </li>
+      <li class="nav-item dropdown">
+        
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      
+    </ul>
+ 
+
+    <form class="form-inline my-2 my-lg-0 " >
+      <input class="form-control mr-sm-2 length" type="search " placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"></a> Search</button>
+
+    </form>
+
+  <a class="active" href="#"><span style="font-size:20px;color:white;"><i class="fa fa-fw fa-facebook "></i></span></a>
+ <a class="active" href="#"><span style="font-size:20px;color:white;"><i class="fa fa-fw fa-twitter"></i></span></a>
+ <a class="active" href="#"><span style="font-size:20px;color:white;"><i class="fa fa-fw fa-instagram"></i></span></a>
+ 
+  <a href="#"><span style="font-size:20px;color:white;"><i class="fa fa-fw fa-phone"></i></span><span style="color:white;">CONTACT</span></a>
+  <a href="#"><span style="font-size:20px;color:white;"><i class="fa fa-fw fa-envelope"></i></span><span style="color:white;">EMAIL</span></a>
+  <a href="#"><span style="font-size:20px;color:white;"><i class="fa fa-fw fa-user"></i></span><span style="color:white;" > LOGIN</span></a>
+ 
+
+  </div>
+</nav>
+
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="14.JPG" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="15.JPG" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="16.JPG" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <h4>Welcome to E-Shop</h4>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="section1" class="container-fluid bg-light" style="padding-top:70px;padding-bottom:70px">
+  <h1 class="text-center" >Men Catagories</h1>
+  
+
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="aa.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+    </div>
+    <div class="col-sm-4">
+      
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="bb.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+    </div>
+
+<div class="col-sm-4">
+      
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="cc.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="dd.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    <div class="col-sm-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="ee.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="ff.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="gg.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="hh.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="ii.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<div id="section2" class="container-fluid bg-light" style="padding-top:70px;padding-bottom:70px">
+  <h1 class="text-center">Women Catagories</h1>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="a.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+    </div>
+    <div class="col-sm-4">
+      
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="b.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+    </div>
+
+<div class="col-sm-4">
+      
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="c.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="d.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    <div class="col-sm-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="e.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="f.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="g.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="h.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="i.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div id="section3" class="container-fluid bg-light" style="padding-top:70px;padding-bottom:70px">
+  <h1 class="text-center" >Kids</h1>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="aaa.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+    </div>
+    <div class="col-sm-4">
+      
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="bbb.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+    </div>
+
+<div class="col-sm-4">
+      
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="ccc.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="ddd.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    <div class="col-sm-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="eee.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="fff.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+<br>
+<div class="row">
+    <div class="col-sm-4">
+      
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="ggg.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+    </div>
+    <div class="col-md-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="hhh.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="iii.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+<div id="section4" class="container-fluid bg-light" style="padding-top:70px;padding-bottom:70px">
+  <h1 class="text-center" >New Arrivals</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="11.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+    </div>
+    <div class="col-sm-4">
+      
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="122.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+    </div>
+
+<div class="col-sm-4">
+      
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="13.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="166.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    <div class="col-sm-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="17.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="18.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="zzz.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="yyy.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-4">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="xxx.jpg" alt="Avatar" style="width:250px;height:278px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div id="section42" class="container-fluid bg-success" style="padding-top:10px;padding-bottom:10px">
+  
+  
+   <footer class="text-center text-lg-start text-white "
+          style="background-color: #929fba">
+    <!-- Grid container -->
+    <div class="container-fluid  bg-success p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              E-SHOP
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p>
+               <a class="text-white" href="#section1">MEN<span class="sr-only">(current)</span></a>
+            </p>
+            <p>
+                      <a class="text-white" href="#section2">WOMEN</a>
+            </p>
+            <p>
+             <a class="text-white" href="#section3">KIDS</a>
+            </p>
+            <p>
+             <a class="text-white" href="#section4">ARRIVALS</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p><i class="fa fa-home mr-3"></i> ISLAMABAD,I-10/2, PAKISTAN</p>
+            <p><i class="fa fa-envelope mr-3"></i> miniproject@gmail.com</p>
+            <p><i class="fa fa-phone mr-3"></i> + 92 333 567 8867</p>
+            <p><i class="fa fa-print mr-3"></i> + 92 334 567 8945</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+            <!-- Facebook -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #3b5998"
+               href="#!"
+               role="button"
+               ><i class="fa fa-facebook"></i
+              ></a>
+
+            <!-- Twitter -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #55acee"
+               href="#!"
+               role="button"
+               ><i class="fa fa-twitter"></i
+              ></a>
+
+            <!-- Google -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #dd4b39"
+               href="#!"
+               role="button"
+               ><i class="fa fa-google"></i
+              ></a>
+
+            <!-- Instagram -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #ac2bac"
+               href="#!"
+               role="button"
+               ><i class="fa fa-instagram"></i
+              ></a>
+
+            <!-- Linkedin -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #0082ca"
+               href="#!"
+               role="button"
+               ><i class="fa fa-linkedin"></i
+              ></a>
+            <!-- Github -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #333333"
+               href="#!"
+               role="button"
+               ><i class="fa fa-github"></i
+              ></a>
+          </div>
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0.2, 0.3, 0.2, 0.3)"
+         >
+      © 2020 Copyright:
+      <a class="text-white" href="#"
+         >miniproject.com</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  
+  
+  
+  
+  
+  
+</div>
+
+
+</body>
+</html>
